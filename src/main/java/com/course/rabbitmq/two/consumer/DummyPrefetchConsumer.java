@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
 
-@Service
+//@Service
 public class DummyPrefetchConsumer {
 
-    private static final Logger LOG = LoggerFactory.getLogger(DummyConsumer.class);
+    private static final Logger LOG = LoggerFactory.getLogger(DummyPrefetchConsumer.class);
 
     @RabbitListener(queues = "q.dummy", concurrency = "2")
     public void listenDummy(DummyMessage message) throws InterruptedException {
