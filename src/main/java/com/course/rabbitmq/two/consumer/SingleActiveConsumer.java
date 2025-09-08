@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
 
-@Service
+//@Service
 public class SingleActiveConsumer {
 
-    private static final Logger LOG = LoggerFactory.getLogger(MultiplePrefetchConsumer.class);
+    private static final Logger LOG = LoggerFactory.getLogger(SingleActiveConsumer.class);
 
     @RabbitListener(queues = "q.single", concurrency = "5")
     public void listenTransaction(DummyMessage message) throws InterruptedException {
